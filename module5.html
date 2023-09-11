@@ -1,0 +1,461 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Shop Mart</title>
+        <link rel="stylesheet" href="bootstrap.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+       
+        <script src="js\java.js"></script>
+        <script src="js\bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script
+        src="https://code.jquery.com/color/jquery.color-2.2.0.js"
+        integrity="sha256-gvMJWDHjgDrVSiN6eBI9h7dRfQmsTTsGU/eTT8vpzNg="
+        crossorigin="anonymous"></script>
+    
+    <style>
+  .col-xs-12 {
+    position: relative;
+    max-width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  .col-xs-12 img {vertical-align: middle;}
+  .col-xs-12 .fade-in-text {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    font-size: 40px;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.bottom:hover{
+  background-color: rgb(252, 241, 194);
+}
+.btn{
+  background-color:rgb(252, 241, 194);
+}
+.nav{
+  background-color:maroon;
+}
+  body{
+      margin: 0%;
+      padding: 0%;
+      background-color:rgb(252, 241, 194);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .nav-link:hover{
+      background-color:sandybrown;
+      color:maroon ;
+  }
+  section{
+    margin-left: 20px;
+    color: maroon;
+  }
+
+ .btn:hover{
+  background-color: sandybrown;
+ }
+ .menu:hover{
+  background-color: sandybrown;
+ }
+        </style>
+    </head>
+    <body >
+        <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xs-12">
+<header > 
+  <nav  id="navbar" class="nav nav-justified">
+  <a href="#" class="nav-link" ><img src="data:image/png;base64,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" alt="" style="height: 90px;"></a>
+  <a href="#" class="nav-link" style="margin-top: 30px;color:rgb(252, 241, 194);">Home</a>
+  <a href="#" class="nav-link" style="margin-top: 30px;color:rgb(252, 241, 194);">About us </a>
+  <a href="#" class="nav-link" style="margin-top: 30px;color:rgb(252, 241, 194);">Contact </a>
+  <a href="#" class="nav-link" style="margin-top: 30px;color:rgb(252, 241, 194);">Stores</a>
+  <a href="#" class="nav-link" style="margin-top: 30px;color:rgb(252, 241, 194);">Products</a>
+  <a href="#" class="nav-link btn" style="height:40px; margin-top: 30px;color:maroon;background-color: rgb(252, 241, 194) "><span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/slkvcfos.json"
+        trigger="hover"
+        colors="primary:#5c0e0a,secondary:#5c0e0a"
+        style="width:20px;height:20px">
+    </lord-icon></span>Add to cart</a>
+
+</nav></header>         
+                  </div>
+              </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                           <img src="https://blogpakistan.pk/wp-content/uploads/2022/12/xx-best-online-shopping-websites-in-pakistan-2022-1024x400.jpg" alt="" style="width:100%;height: 400px; color:white">
+                           <div class="fade-in-text">
+                             <p>&quot;HAPPY SHOPPING</p>
+                             <p style="font-size: 30px;">HAVE A NICE DAY&quot;</p>
+                           </div>
+                         </div>   
+                   </div>
+   
+
+            <div class="row" >
+                <div class="col-xs-12" style="text-align: center;color: maroon; font-style: bold; font-size: 30px;margin-top: 30px;">Top Categories</div>
+            </div>
+           <div class="row" >
+            <div class="col-xs menu">
+             <span ><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+              <lord-icon 
+                  src="https://cdn.lordicon.com/itmmouju.json"
+                  trigger="hover"
+                  colors="primary:rgb(252, 241, 194),secondary:rgb(252, 241, 194)"
+                  style="width:100px;height:100px;background-color:#5c0e0a;">
+              </lord-icon></span> 
+              <div style="color: maroon; margin-left: 10px;">GROCERY</div>
+            </div>
+            <div class="col-xs menu">
+              <span ><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/coqbeapw.json"
+                    trigger="hover"
+                    colors="primary:rgb(252, 241, 194),secondary:rgb(252, 241, 194)"
+                    style="width:100px;height:100px;background-color:#5c0e0a;">
+                </lord-icon></span> 
+               <div style="color: maroon; margin-left: 10px;">MEAT</div>
+             </div>
+             <div class="col-xs menu">
+              <span ><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/jpdtnwas.json"
+                    trigger="hover"
+                    colors="primary:rgb(252, 241, 194),secondary:rgb(252, 241, 194)"
+                    style="width:100px;height:100px;background-color: maroon;">
+                </lord-icon></span> 
+               <div style="color: maroon; margin-left: 10px;">SNACKS</div>
+             </div>
+             <div class="col-xs menu">
+              <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/kdruzgxz.json"
+                    trigger="hover"
+                    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                    style="width:100px;height:100px;background-color: maroon;">
+                </lord-icon></span> 
+               <div  style="color: maroon; margin-left: 10px;">SOFT DRINKS</div>
+             </div>
+           </div>
+
+            <div class="row " style="background-color: maroon;height: 100px; margin-top: 50px;">
+              <div class="col-3 " style="color: rgb(252, 241, 194); margin-left: 200px; margin-top: 30px;">
+                Subscribe to Our Newsletter
+              </div>
+              <div class="col" style="position: relative;">
+                <input type="email" name="" id="" class="rounded-5" style="height: 35px;width: 200px; margin-top: 30px ; margin-bottom: 200px; background-color: rgb(252, 241, 194);">
+                <button class="btn" style="background-color: rgb(252, 241, 194); height: 40px;width: 100px; color: maroon;">Sign up</button>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+              <div class="col-xs">
+                <img  src="https://cdn.winsightmedia.com/platform/files/public/2022-05/background/800x1000/shutterstock_1771414046.jpg?VersionId=XuEsmi03wzuelycvEMCHDLzruWa2cfiN" alt="" style="height:500px;width: 400px;background-color:rgb(252, 241, 194) ;">
+               </div>
+              <div class="col-xs" style="color: #5c0e0a;"><h1>About us</h1>
+              <div>&quot;At Shop Mart, we are proud to be recognized for our dedication to quality.
+                We have a number of notable certifications that demonstrate our commitment to excellence and customer satisfaction.
+                that we put the privacy and security of our customers first.
+                We received the Green Business Certification for our commitment to environmentally responsible business practices.
+                You can shop with confidence knowing that buy Mart is a reputable and trusted online seller with these certifications.
+                Discover the ease of shopping online with Shop Mart, where we prioritize quality, price and exceptional customer service.&quot;</div>
+               <div class="row">
+                <div class="col-xs menu">
+                  <span> <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/yyecauzv.json"
+                        trigger="hover"
+                        colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                        style="width:100px;height:100px">
+                    </lord-icon> <div>Privacy Police</div></span>
+                    
+                </div>
+                <div class="col-xs menu">
+                  <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/lfqzieho.json"
+                        trigger="hover"
+                        colors="primary:#5c0e0a"
+                        style="width:100px;height:100px">
+                    </lord-icon><div>Warning</div></span>
+                </div>
+                <div class="col-xs menu">
+                  <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/mdgrhyca.json"
+                        trigger="morph"
+                        colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                        style="width:100px;height:100px">
+                    </lord-icon></span>
+               <div>Rating</div> </div>
+               <div class="col-xs menu">
+                <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/zpxybbhl.json"
+                      trigger="hover"
+                      colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                      style="width:100px;height:100px">
+                  </lord-icon></span>
+              <div>Reviews</div></div>
+               </div>
+              </div>
+            </div>
+
+            <div class="row" >
+              <div class="col-xs-12" style="background-color: sandybrown;margin-top: 50px;">
+                <div class="row">
+                  <div class="col">
+                    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRajHGJal2DoVfcBVXIeVjkuq427lXnKnuk0lnQ704BLKwpzNO8" alt="" style="height: 150px;margin-left: 20px;margin-top: 20px;"></div>
+                  </div>
+                  <div class="col-xs">
+                    <section>
+                      
+                      <h4>Quick Links</h4>
+                    <div class="bottom">
+                      <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/gmzxduhd.json"
+                            trigger="hover"
+                            colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                            style="width:25px;height:25px">
+                        </lord-icon></span>
+                      Home</div>
+                    <div class="bottom"><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                      <lord-icon
+                          src="https://cdn.lordicon.com/ncxoarcp.json"
+                          trigger="hover"
+                          colors="primary:#5c0e0a"
+                          state="hover"
+                          style="width:20px;height:20px">
+                      </lord-icon>
+                      About us</div>
+                    <div class="bottom"> <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                      <lord-icon
+                          src="https://cdn.lordicon.com/tftaqjwp.json"
+                          trigger="hover"
+                          colors="primary:#5c0e0a"
+                          style="width:20px;height:20px">
+                      </lord-icon></span>
+                      Contact</div>
+                    <div class="bottom"><span>
+                      <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+     <lord-icon
+    src="https://cdn.lordicon.com/zzcjjxew.json"
+    trigger="hover"
+    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+    style="width:25px;height:25px">
+   </lord-icon></span>Stores</div>
+   <div class="bottom">
+    <span>
+      <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/xbyoroeu.json"
+    trigger="hover"
+    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+    style="width:25px;height:25px">
+</lord-icon>
+    </span>
+    Products</div>
+                    </section>
+
+                  </div>
+                  <div class="col-xs">
+                    <section>
+                      <h4> Categories </h4>
+                      <div class="bottom">
+                        <span>
+                          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/itmmouju.json"
+    trigger="hover"
+    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+    style="width:25px;height:25px">
+</lord-icon>
+                        </span>
+                        Grocery</div>
+                      <div class="bottom">
+                        <span>
+                          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/coqbeapw.json"
+    trigger="hover"
+    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+    style="width:25px;height:25px">
+</lord-icon>
+                        </span>
+                        Meat</div>
+                        <div class="bottom">
+                          <span>
+                            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/jpdtnwas.json"
+    trigger="hover"
+    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+    style="width:25px;height:25px">
+</lord-icon>
+                          </span>
+                          Snacks</div>
+                          <div class="bottom">
+                              <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/kdruzgxz.json"
+                                    trigger="hover"
+                                    colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                                    style="width:25px;height:25px">
+                                </lord-icon></span>
+                              Soft drinks</div>
+                    </section>
+                  </div>
+                  <div class="col-xs">
+                    <section>
+                      <h4>Contact</h4>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/tftaqjwp.json"
+                              trigger="hover"
+                              colors="primary:#5c0e0a"
+                              style="width:25px;height:25px">
+                          </lord-icon></span>
+                      Telephone:111-111-111-11</div>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/rhvddzym.json"
+                              trigger="hover"
+                              colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                              style="width:25px;height:25px">
+                          </lord-icon></span>
+                      Email:@****gmail.com</div>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/pkmkagva.json"
+                              trigger="hover"
+                              colors="primary:#5c0e0a"
+                              style="width:25px;height:25px">
+                          </lord-icon>
+                          </span>
+                      Chat:111-111-111-11</div>
+                    </section>
+                  </div>
+                  <div class="col-xs">
+                    <section>
+                      <h4>Support</h4>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/mdgrhyca.json"
+                              trigger="morph"
+                              colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                              style="width:25px;height:25px">
+                          </lord-icon></span>
+                     Rating </div>
+                     <div class="bottom">
+                      <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/zpxybbhl.json"
+                            trigger="hover"
+                            colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                            style="width:25px;height:25px">
+                        </lord-icon></span>
+                    Reviews</div>
+                    <div class="bottom">
+                      <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/udwhdpod.json"
+                            trigger="hover"
+                            colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                            style="width:25px;height:25px">
+                        </lord-icon></span>
+                    Sharing</div>
+                    </section>
+                  </div>
+                  <div class="col">
+                    <section>
+                      <h4>More</h4>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/uetqnvvg.json"
+                              trigger="hover"
+                              colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                              style="width:25px;height:25px">
+                          </lord-icon></span>
+                      Delivery Service</div>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/yyecauzv.json"
+                              trigger="hover"
+                              colors="primary:#5c0e0a,secondary:rgb(252, 241, 194)"
+                              style="width:25px;height:25px">
+                          </lord-icon></span>
+                      Privacy Policy</div>
+                      <div class="bottom">
+                        <span><script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/msetysan.json"
+                              trigger="hover"
+                              colors="primary:#5c0e0a"
+                              style="width:25px;height:25px">
+                          </lord-icon></span>
+                      Notifications</div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div class="row">
+            <div class="col-xs" style="text-align: center; color: rgb(252, 241, 194); background-color: maroon;">
+              &copy;2023 Shopmart All rights reserved.
+            </div>
+          </div>
+          </div>
+
+<script src="js\bootstrap.js"></script>
+<script src="js\java.js"></script>
+
+
+</body>
+</html>
